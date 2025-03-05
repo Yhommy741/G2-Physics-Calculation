@@ -52,8 +52,7 @@ S_x = v_x_expr * time_expr
 # Plot results
 fig, ax = plt.subplots()
 ax.plot(X, S_x)
-ax.set_xlabel("ThetaB (degrees)")
-ax.set_ylabel("S_x (m)")
-ax.set_title("Relationship between S_x and ThetaB")
+ax.set_xlabel("Degree of Racket (Degree)")
+ax.set_ylabel("Distance the ball falls (m)")
 plt.grid()
 plt.show()
