@@ -10,17 +10,17 @@ h_hit = 0.4  # m
 
 m_ball = 0.024
 e = 0.378
-I_bat = 0.29
-r = 0.35
+I_bat = 0.024
+r = 0.4
 
 # Free Falling of Squash ball
 u_y = -math.sqrt(2 * g * (h_drop - h_hit))  # m/s
 
 # Assume Suitable Projectile motion for longest Range
-thetaV = 45  # deg
+thetaV = 40.71  # deg
 float_time = math.sqrt((2 * (S_x_max * math.tan(math.radians(thetaV)) + h_hit)) / g)
 v_x = S_x_max / float_time
-v_y = v_x  # 45 deg
+v_y =  math.sqrt((v_x/math.cos(math.radians(thetaV)))**2 - v_x**2)
 
 # Find ThetaB for suitable Projectile motion for longest Range
 thetaB = math.atan(v_x / (v_y + abs(u_y)))  # Radians
